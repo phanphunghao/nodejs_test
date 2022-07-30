@@ -26,7 +26,7 @@ process.env.TZ = 'Asia/Ho_Chi_Minh';
 
 //===== INCLUDING ENVIRONMENT CONFIGURATION
 global.CONSTANT = require ('./config/constant');
-global.APP_SETTINGS = require ('./config/config');
+// global.APP_SETTINGS = require ('./config/config');
 
 //===== Enable logger
 global.logger = require ('./libraries/Common/Logger/Logger');
@@ -58,9 +58,9 @@ const app = express ();
 app.enable ('trust proxy');
 
 // set server listening port
-let PORT = APP_SETTINGS.PORT;
-let HOST = APP_SETTINGS.HOST;
-let PROTOCOL = APP_SETTINGS.PROTOCOL;
+let PORT = 3001 //APP_SETTINGS.PORT;
+let HOST = 'phanphunghaocs' //APP_SETTINGS.HOST;
+let PROTOCOL = 'https' //APP_SETTINGS.PROTOCOL;
 
 //===== COMPRESS RESPONSE
 app.use (compression ());
@@ -114,12 +114,12 @@ app.use ((req, res, next) => {
   // to the API (e.g. in case you use sessions)
   res.setHeader ('Access-Control-Allow-Credentials', false);
 
-  res.setHeader ("Content-Type", APP_SETTINGS.ACCEPT_CONTENT_TYPE);
+  // res.setHeader ("Content-Type", APP_SETTINGS.ACCEPT_CONTENT_TYPE);
 
-  res.setHeader ("Accept", APP_SETTINGS.ACCEPT_TYPE.join (', '));
+  // res.setHeader ("Accept", APP_SETTINGS.ACCEPT_TYPE.join (', '));
 
   // set power-by
-  res.setHeader ('X-Powered-By', APP_SETTINGS.POWER_BY);
+  // res.setHeader ('X-Powered-By', APP_SETTINGS.POWER_BY);
 
   if (req.method === 'OPTIONS') {
     res.status (CONSTANT.HTTP_STATUS_OK).end ();
