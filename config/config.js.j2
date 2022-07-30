@@ -1,0 +1,14 @@
+const path = require ('path');
+const CONFIG_PATH = '/etc/ssl/certs/{{ main_domain }}';
+
+const APP_SETTINGS = {
+  // Origin
+  PROTOCOL: '{{ app_protocol }}',
+  PORT: {{ app_port }},
+  HOST: '{{ app_domain }}',
+  ACCEPT_CONTENT_TYPE: 'application/json; charset=utf-8',
+  ACCEPT_TYPE: ['application/json', 'application/x-www-form-urlencoded'],
+  POWER_BY: 'BeTall Technology',
+};
+
+module.exports = APP_SETTINGS;
