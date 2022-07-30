@@ -1,6 +1,4 @@
 # Prerequisites
-### MongoDB
-- Install latest mongodb
 ### NodeJS
 - Install nodejs version 16.x LTS
 ### Node Package Manager
