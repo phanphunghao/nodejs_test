@@ -59,7 +59,7 @@ app.enable ('trust proxy');
 
 // set server listening port
 let PORT = 3001 //APP_SETTINGS.PORT;
-let HOST = 'phanphunghaocs' //APP_SETTINGS.HOST;
+let HOST = '127.0.0.1' //APP_SETTINGS.HOST;
 let PROTOCOL = 'https' //APP_SETTINGS.PROTOCOL;
 
 //===== COMPRESS RESPONSE
