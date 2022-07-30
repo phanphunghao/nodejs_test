@@ -32,6 +32,6 @@ jobs:
         # cache-dependency-path: "/home/runner/work/nodejs_test"
 
     - run: echo "=======> npm install start....."
-    - run: npm ci
+    # - run: npm ci
     - run: npm run dev
     # - run: npm test
